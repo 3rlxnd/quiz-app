@@ -1,7 +1,11 @@
 header {
-    font-size: 12px;
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
     color: var(--light);
+    position: sticky;
+}
+
+h1 {
+    font-size: 16px;
 }
