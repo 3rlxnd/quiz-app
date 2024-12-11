@@ -2,3 +2,14 @@
 @import "./main.css";
 @import "./footer.css";
 
+:root {
+    --primary-color: rgb(28, 74, 88);
+    --secondary-color: rgb(28, 74, 88);
+    --light: white;
+    --dark: black;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
