@@ -19,9 +19,8 @@
 .card-title {
     flex-wrap: wrap;
     margin: 0;
-    width: 90%;
+    width: 85%;
     font-weight: 300;
-    margin-bottom: 10px;
     font-size: 16px;
 }
 
