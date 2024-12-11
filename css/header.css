@@ -1,9 +1,12 @@
 header {
     display: flex;
+    padding: 10px;
     justify-content: center;
     background-color: var(--primary-color);
     color: var(--light);
     position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 h1 {

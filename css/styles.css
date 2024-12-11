@@ -3,10 +3,10 @@
 @import "./footer.css";
 
 :root {
-    --primary-color: rgb(28, 74, 88);
+    --primary-color: rgb(149, 64, 3);
     --secondary-color: rgb(28, 74, 88);
     --light: rgb(210, 210, 210);
-    --dark: black;
+    --dark: rgb(25, 25, 25);
 }
 
 body {
@@ -17,8 +17,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    background-color: var(--dark);
-    position: relative;
+    background-color: black;
     padding: 20px;
     gap: 20px;
 }
