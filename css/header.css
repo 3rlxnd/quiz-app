@@ -1,0 +1,7 @@
+header {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--light);
+}
