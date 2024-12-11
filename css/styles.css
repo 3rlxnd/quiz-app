@@ -17,12 +17,13 @@ p, h2 {
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--dark);
 }
 
 main {
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    background-color: var(--background);
     padding: 20px;
     gap: 20px;
 }

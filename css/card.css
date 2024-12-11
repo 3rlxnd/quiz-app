@@ -1,6 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     padding: 20px;
     background-color: var(--dark);
     color: var(--light);
@@ -20,15 +21,15 @@
     flex-wrap: wrap;
     margin: 0;
     width: 80%;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .card-answers {
     display: flex;
     flex-direction: column;
+    padding: 0px;
     gap: 10px;
-    padding: 20px 0px;
     list-style: none;
 }
 
