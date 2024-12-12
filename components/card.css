@@ -5,10 +5,11 @@
     padding: 20px;
     background-color: var(--dark);
     color: var(--light);
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 14px;
 
     position: relative;
+    /* border-top: 2px solid var(--primary-color); */
 }
 
 .card-bookmark-button {
@@ -17,12 +18,28 @@
     right: 20px;
 }
 
-.card-title {
-    flex-wrap: wrap;
+.card-title-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-difficulty {
     margin: 0;
+    color: var(--primary-color);
     width: 80%;
     font-weight: 700;
     font-size: 14px;
+    text-transform: capitalize;
+}
+
+.card-title {
+    flex-wrap: wrap;
+    margin: 0;
+    width: 90%;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: capitalize;
 }
 
 .card-answers {
@@ -52,4 +69,12 @@
 
 .correct-answer {
     display: none;
+}
+
+.bookmark {
+    color: var(--primary-color);
+}
+
+.thumbnail {
+    color: var(--primary-color);
 }

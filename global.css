@@ -1,9 +1,5 @@
-@import "./header.css";
-@import "./card.css";
-@import "./footer.css";
-
 :root {
-    --primary-color: rgb(149, 64, 3);
+    --primary-color: rgb(206, 86, 0);
     --secondary-color: rgb(28, 74, 88);
     --light: rgb(210, 210, 210);
     --dark: rgb(25, 25, 25);
@@ -21,7 +17,7 @@ body {
 }
 
 main {
-    background-color: var(--primary-color);
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     padding: 20px;
