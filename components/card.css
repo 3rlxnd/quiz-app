@@ -78,3 +78,17 @@
 .thumbnail {
     color: var(--primary-color);
 }
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    color: var(--dark);
+    font-size: 12px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
