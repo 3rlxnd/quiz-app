@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Brainstorm</title>
-  </head>
-  <body style="background-color: var(--background);">
-    <header>
-      <h1>Brainstorm</h1>
-    </header>
-    <main>
-        <section id="profile">
-            <div id="circle">
-                <i class="fa-solid fa-user fa-3x" style="color: var(--light);"></i>
-            </div>
-            <div class="stats-wrapper">
-                <div class="stat">
-                    <i class="fa-solid fa-circle-question fa-xl" style="color: var(--primary-color);"></i>
-                    <p>110</p>
-                </div>
-                <div class="stat">
-                    <i class="fa-solid fa-bookmark fa-xl" style="color: var(--primary-color);"></i>
-                    <p>26</p>
-                </div>
-            </div>
-        </section>
-        <section id="settings">
-            <h2 id="settings-title">Settings</h2>
-            <div class="setting-wrapper">
-                <p>Dark Mode</p>
-                <i class="fa-solid fa-toggle-on fa-2x" style="color: var(--primary-color);"></i>
-          </div>
-            <div class="setting-wrapper">
-                <p>Restart Game</p>
-                <a id="reset-button">Reset</a>
-          </div>
-        </section>
-    </main>
-    <footer style="position: fixed; width: 100%;">
-      <nav>
-        <a href="./index.html">
-          <i
-            class="fa-solid fa-layer-group fa-xl"
-            style="color: var(--light)"
-          >
-          </i>
-        </a>
-        <a href="./bookmarks.html">
-          <i class="fa-regular fa-bookmark fa-xl" style="color: var(--light)"></i>
-        </a>
-        <a>
-          <i class="fa-solid fa-user fa-xl" style="color: var(--primary-color)"></i>
-        </a>
-      </nav>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Brainstorm</title>
+</head>
+
+<body style="background-color: var(--background);">
+  <header>
+    <h1>Brainstorm</h1>
+  </header>
+  <main>
+    <section id="profile">
+      <div id="circle">
+        <i class="fa-solid fa-user fa-3x" style="color: var(--light);"></i>
+      </div>
+      <div class="stats-wrapper">
+        <div class="stat">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: var(--primary-color);"></i>
+
+          <p>45 / 110</p>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-bookmark fa-xl" style="color: var(--primary-color);"></i>
+          <p>7</p>
+        </div>
+      </div>
+    </section>
+    <section id="settings">
+      <h2 id="settings-title">Settings</h2>
+      <div class="setting-wrapper">
+        <p>Dark Mode</p>
+        <button id="toggle-button">
+          <i class="fa-solid fa-toggle-on fa-2x"></i>
+        </button>
+      </div>
+      <div class="setting-wrapper">
+        <p>Restart Game</p>
+        <button id="reset-button">Reset</button>
+      </div>
+    </section>
+  </main>
+  <footer style="position: fixed; width: 100%;">
+    <nav>
+      <a href="./index.html">
+        <i class="fa-solid fa-layer-group fa-xl" style="color: var(--light)">
+        </i>
+      </a>
+      <a href="./bookmarks.html">
+        <i class="fa-regular fa-bookmark fa-xl" style="color: var(--light)"></i>
+      </a>
+      <a>
+        <i class="fa-solid fa-user fa-xl" style="color: var(--primary-color)"></i>
+      </a>
+    </nav>
+  </footer>
+</body>
+
 </html>
