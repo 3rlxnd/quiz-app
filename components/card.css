@@ -86,7 +86,7 @@
 }
 
 .tag {
-    color: var(--dark);
+    color: var(--light);
     font-size: 12px;
     background-color: var(--primary-color);
     border-radius: 4px;
