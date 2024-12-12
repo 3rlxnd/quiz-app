@@ -1031,28 +1031,32 @@ function showQuestions() {
   const container = document.querySelector("main");
   container.innerHTML = "";
   questions.forEach((item) => {
-    const card = document.createElement("section");
-    card.className = "card";
-    card.innerHTML = `
-		<p class="card-bookmark-button">
-		<i class="fa-${item.isBookmarked ? "solid" : "regular"} fa-bookmark fa-xl bookmark"></i>
-		  </p>
-		  <div class="card-title-wrapper">
-			  <i class="fa-solid fa-star fa-xl thumbnail"></i>
-			  <h2 class="card-difficulty">${item.difficulty}</h2>
-		  </div>
-		  <h2 class="card-title">${item.question}</h2>
-		  <ul class="card-answers">
-			  <li class="answer" aria-label="Answer 1">${item.answers[0]}</li>
-			  <li class="answer" aria-label="Answer 2">${item.answers[1]}</li>
-			  <li class="answer" aria-label="Answer 3">${item.answers[2]}</li>
-			  <li class="answer" aria-label="Answer 4">${item.answers[3]}</li>
-		  </ul>
-		  <div class="tags-wrapper">
-			  ${item.tags.map((tag) => `<p class="tag">#${tag}</p>`).join("")}
-		  </div>
-		  <p class="correct-answer">${item.correctAnswer}</p>`;
-    container.appendChild(card);
+    if (item.isBookmarked) {
+      const card = document.createElement("section");
+      card.className = "card";
+      card.innerHTML = `
+          <p class="card-bookmark-button">
+          <i class="fa-${
+            item.isBookmarked ? "solid" : "regular"
+          } fa-bookmark fa-xl bookmark"></i>
+            </p>
+            <div class="card-title-wrapper">
+                <i class="fa-solid fa-star fa-xl thumbnail"></i>
+                <h2 class="card-difficulty">${item.difficulty}</h2>
+            </div>
+            <h2 class="card-title">${item.question}</h2>
+            <ul class="card-answers">
+                <li class="answer" aria-label="Answer 1">${item.answers[0]}</li>
+                <li class="answer" aria-label="Answer 2">${item.answers[1]}</li>
+                <li class="answer" aria-label="Answer 3">${item.answers[2]}</li>
+                <li class="answer" aria-label="Answer 4">${item.answers[3]}</li>
+            </ul>
+            <div class="tags-wrapper">
+                ${item.tags.map((tag) => `<p class="tag">#${tag}</p>`).join("")}
+            </div>
+            <p class="correct-answer">${item.correctAnswer}</p>`;
+      container.appendChild(card);
+    }
   });
 }
 
