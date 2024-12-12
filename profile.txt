@@ -1,0 +1,7 @@
+<section class="profile">
+          <i class="fa-solid fa-user fa-3x" style="color: var(--primary-color)"></i>
+          <h2>Level</h2>
+      </section>
+      <section id="settings">
+        <h2></h2>
+      </section>
