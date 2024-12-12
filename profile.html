@@ -10,14 +10,39 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Brainstorm</title>
   </head>
-
   <body>
     <header>
       <h1>Brainstorm</h1>
     </header>
     <main>
+        <section id="profile">
+            <div id="circle">
+                <i class="fa-solid fa-user fa-3x" style="color: var(--primary-color);"></i>
+            </div>
+            <div class="stats-wrapper">
+                <div class="stat">
+                    <i class="fa-solid fa-circle-question fa-xl" style="color: var(--primary-color);"></i>
+                    <p>110</p>
+                </div>
+                <div class="stat">
+                    <i class="fa-solid fa-bookmark fa-xl" style="color: var(--primary-color);"></i>
+                    <p>26</p>
+                </div>
+            </div>
+        </section>
+        <section id="settings">
+            <h2 id="settings-title">Settings</h2>
+            <div class="setting-wrapper">
+                <p>Dark Mode</p>
+                <i class="fa-solid fa-toggle-on fa-2x" style="color: var(--primary-color);"></i>
+          </div>
+            <div class="setting-wrapper">
+                <p>Restart Game</p>
+                <a id="reset-button">Reset</a>
+          </div>
+        </section>
     </main>
-    <footer>
+    <footer style="position: fixed; width: 100%;">
       <nav>
         <a href="./index.html">
           <i

@@ -1057,3 +1057,4 @@ function showQuestions() {
 }
 
 showQuestions();
+console.log(questions.length)
