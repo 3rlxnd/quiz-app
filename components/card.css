@@ -7,6 +7,7 @@
     color: var(--light);
     border-radius: 10px;
     font-size: 14px;
+    box-shadow: 0px 0px 8px black;
 
     position: relative;
     /* border-top: 2px solid var(--primary-color); */
@@ -82,7 +83,7 @@
 .tags-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
 .tag {
