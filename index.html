@@ -1,37 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Brainstorm</title>
-  </head>
 
-  <body>
-    <header>
-      <h1>Brainstorm</h1>
-    </header>
-    <main></main>
-    <footer>
-      <nav>
-        <a>
-          <i
-            class="fa-solid fa-layer-group fa-xl"
-            style="color: var(--primary-color)"
-          >
-          </i>
-        </a>
-        <a href="./bookmarks.html">
-          <i class="fa-regular fa-bookmark fa-xl" style="color: var(--light)"></i>
-        </a>
-        <a href="./profile.html">
-          <i class="fa-regular fa-user fa-xl" style="color: var(--light)"></i>
-        </a>
-      </nav>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Brainstorm</title>
+</head>
+<body>
+  <header role="heading">
+    <h1>Brainstorm</h1>
+  </header>
+  <main role="main">
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Easy</h2>
+      </div>
+      <h2 class="card-title">Which country is home to the Great Barrier Reef?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Australia</li>
+        <li role="button" class="answer" aria-label="Answer 2">Indonesia</li>
+        <li role="button" class="answer" aria-label="Answer 3">Philippines</li>
+        <li role="button" class="answer" aria-label="Answer 4">New Zealand</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Nature</p>
+      </div>
+      <p class="correct-answer">Australia</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Medium</h2>
+      </div>
+      <h2 class="card-title">What is the capital city of Japan?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Tokyo</li>
+        <li role="button" class="answer" aria-label="Answer 2">Osaka</li>
+        <li role="button" class="answer" aria-label="Answer 3">Kyoto</li>
+        <li role="button" class="answer" aria-label="Answer 4">Nagoya</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Geography</p>
+      </div>
+      <p class="correct-answer">Tokyo</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-solid fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Easy</h2>
+      </div>
+      <h2 class="card-title">Which planet is known as the Red Planet?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Mars</li>
+        <li role="button" class="answer" aria-label="Answer 2">Earth</li>
+        <li role="button" class="answer" aria-label="Answer 3">Jupiter</li>
+        <li role="button" class="answer" aria-label="Answer 4">Venus</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Space</p>
+      </div>
+      <p class="correct-answer">Mars</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Hard</h2>
+      </div>
+      <h2 class="card-title">What is the smallest country in the world by area?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Vatican City</li>
+        <li role="button" class="answer" aria-label="Answer 2">Monaco</li>
+        <li role="button" class="answer" aria-label="Answer 3">San Marino</li>
+        <li role="button" class="answer" aria-label="Answer 4">Liechtenstein</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Geography</p>
+      </div>
+      <p class="correct-answer">Vatican City</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-solid fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Medium</h2>
+      </div>
+      <h2 class="card-title">Who painted the Mona Lisa?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Leonardo da Vinci</li>
+        <li role="button" class="answer" aria-label="Answer 2">Michelangelo</li>
+        <li role="button" class="answer" aria-label="Answer 3">Raphael</li>
+        <li role="button" class="answer" aria-label="Answer 4">Donatello</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Art</p>
+      </div>
+      <p class="correct-answer">Leonardo da Vinci</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Hard</h2>
+      </div>
+      <h2 class="card-title">What year did the Titanic sink?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">1912</li>
+        <li role="button" class="answer" aria-label="Answer 2">1905</li>
+        <li role="button" class="answer" aria-label="Answer 3">1920</li>
+        <li role="button" class="answer" aria-label="Answer 4">1918</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#History</p>
+      </div>
+      <p class="correct-answer">1912</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Medium</h2>
+      </div>
+      <h2 class="card-title">Which element has the chemical symbol 'O'?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Oxygen</li>
+        <li role="button" class="answer" aria-label="Answer 2">Osmium</li>
+        <li role="button" class="answer" aria-label="Answer 3">Gold</li>
+        <li role="button" class="answer" aria-label="Answer 4">Carbon</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Science</p>
+      </div>
+      <p class="correct-answer">Oxygen</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-solid fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Easy</h2>
+      </div>
+      <h2 class="card-title">How many continents are there?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Seven</li>
+        <li role="button" class="answer" aria-label="Answer 2">Six</li>
+        <li role="button" class="answer" aria-label="Answer 3">Eight</li>
+        <li role="button" class="answer" aria-label="Answer 4">Nine</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Geography</p>
+      </div>
+      <p class="correct-answer">Seven</p>
+    </section>
+    
+    <section class="card">
+      <p class="card-bookmark-button">
+        <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
+      </p>
+      <div class="card-title-wrapper" aria-label="Difficulty Level">
+        <i class="fa-solid fa-star fa-xl thumbnail" aria-hidden="true"></i>
+        <h2 class="card-difficulty">Medium</h2>
+      </div>
+      <h2 class="card-title">Who discovered penicillin?</h2>
+      <ul class="card-answers">
+        <li role="button" class="answer" aria-label="Answer 1">Alexander Fleming</li>
+        <li role="button" class="answer" aria-label="Answer 2">Marie Curie</li>
+        <li role="button" class="answer" aria-label="Answer 3">Albert Einstein</li>
+        <li role="button" class="answer" aria-label="Answer 4">Louis Pasteur</li>
+      </ul>
+      <div class="tags-wrapper" aria-label="Tags">
+        <p class="tag">#Science</p>
+      </div>
+      <p class="correct-answer">Alexander Fleming</p>
+    </section>    
+  </main>
+  <footer>
+    <nav role="navigation" aria-label="Main Navigation">
+      <a aria-label="Home" aria-pressed="true">
+        <i class="fa-solid fa-layer-group fa-xl" style="color: var(--primary-color)"></i>
+      </a>
+      <a href="./bookmarks.html" aria-label="Bookmarks">
+        <i class="fa-regular fa-bookmark fa-xl" style="color: var(--light)"></i>
+      </a>
+      <a href="./profile.html" aria-label="Profile">
+        <i class="fa-regular fa-user fa-xl" style="color: var(--light)"></i>
+      </a>
+    </nav>
+  </footer>
+</body>
 </html>

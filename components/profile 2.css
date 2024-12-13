@@ -1,0 +1,83 @@
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px black;
+    /* border: 3px solid var(--primary-color); */
+    background-color: var(--dark);
+}
+
+#profile {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.stats-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: var(--light);
+    font-size: 14px;
+    background-color: var(--dark);
+    border-radius: 4px;
+    padding: 8px 20px;
+    align-items: center;
+    box-shadow: 0px 0px 8px black;
+    font-weight: 700;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--light);
+}
+
+.settings-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+#settings-title {
+    font-size: 16px;
+    font-weight: 600;
+    /* align-self: center; */
+}
+
+.setting-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reset-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--primary-color);
+}
+
+#toggle-button {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
