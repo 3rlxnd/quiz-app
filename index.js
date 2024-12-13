@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
   {
     question: "Which planet is the second closest to the Sun?",
     answers: ["Venus", "Mercury", "Earth", "Mars"],
