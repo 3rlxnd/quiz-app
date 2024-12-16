@@ -1028,11 +1028,11 @@ let questions = [
 ];
 
 function showQuestions() {
-  shuffleArray(questions);
+  shuffleArray(questions)
   const container = document.querySelector("main");
   container.innerHTML = "";
-
   questions.forEach((item, index) => {
+    shuffleArray(item.answers)
     const card = document.createElement("section");
     card.className = "card";
     card.dataset.index = index;
