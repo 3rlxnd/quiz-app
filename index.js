@@ -1028,32 +1028,93 @@ let questions = [
 ];
 
 function showQuestions() {
+  shuffleArray(questions);
   const container = document.querySelector("main");
   container.innerHTML = "";
-  questions.forEach((item) => {
+
+  questions.forEach((item, index) => {
     const card = document.createElement("section");
     card.className = "card";
+    card.dataset.index = index;
     card.innerHTML = `
-		<p class="card-bookmark-button">
-		<i class="fa-${item.isBookmarked ? "solid" : "regular"} fa-bookmark fa-xl bookmark"></i>
-		  </p>
-		  <div class="card-title-wrapper">
-			  <i class="fa-solid fa-star fa-xl thumbnail"></i>
-			  <h2 class="card-difficulty">${item.difficulty}</h2>
-		  </div>
-		  <h2 class="card-title">${item.question}</h2>
-		  <ul class="card-answers">
-			  <li class="answer" aria-label="Answer 1">${item.answers[0]}</li>
-			  <li class="answer" aria-label="Answer 2">${item.answers[1]}</li>
-			  <li class="answer" aria-label="Answer 3">${item.answers[2]}</li>
-			  <li class="answer" aria-label="Answer 4">${item.answers[3]}</li>
-		  </ul>
-		  <div class="tags-wrapper">
-			  ${item.tags.map((tag) => `<p class="tag">#${tag}</p>`).join("")}
-		  </div>
-		  <p class="correct-answer">${item.correctAnswer}</p>`;
+      <p class="card-bookmark-button">
+        <i class="fa-${item.isBookmarked ? "solid" : "regular"} fa-bookmark fa-xl bookmark"></i>
+      </p>
+      <div class="card-title-wrapper">
+        <i class="fa-solid fa-star fa-xl thumbnail"></i>
+        <h2 class="card-difficulty">${item.difficulty}</h2>
+      </div>
+      <h2 class="card-title">${item.question}</h2>
+      <ul class="card-answers">
+        ${item.answers
+          .map((answer) => `<li class="answer" aria-label="Answer">${answer}</li>`)
+          .join("")}
+      </ul>
+      <div class="tags-wrapper">
+        ${item.tags.map((tag) => `<p class="tag">#${tag}</p>`).join("")}
+      </div>
+      <p class="correct-answer">${item.correctAnswer}</p>`;
     container.appendChild(card);
   });
+
+  attachEventListeners(); 
+}
+
+function attachEventListeners() {
+  // Answer click logic
+  let answers = document.querySelectorAll(".answer");
+  answers.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const card = event.target.closest(".card"); // Get the parent card
+      const index = parseInt(card.dataset.index); // Retrieve the question index
+      const item = questions[index]; // Get the corresponding item object
+      const answerElement = event.target;
+      const correctAnswerElement = card.querySelector(".correct-answer");
+
+      const correctAnswer = correctAnswerElement.textContent.trim().toLowerCase();
+      const answer = answerElement.textContent.trim().toLowerCase();
+
+      if (answer === correctAnswer) {
+        console.log(`Item solved ${item.solved} times:`, item);
+        answerElement.style.backgroundColor = "green";
+        setTimeout(() => {
+          questions.splice(index, 1);
+          showQuestions()}, 1000
+      )
+      } else {
+        answerElement.style.backgroundColor = "red";
+        setTimeout(() => {
+          answerElement.style.backgroundColor = "var(rgb(30, 30, 30))";
+          showQuestions()
+        }, 1000);
+
+      }
+    });
+  });
+
+  let bookmarks = document.querySelectorAll(".card-bookmark-button i");
+  bookmarks.forEach((icon) => {
+    icon.addEventListener("click", (event) => {
+      const card = event.target.closest(".card");
+      const index = parseInt(card.dataset.index);
+      const item = questions[index];
+
+      // Toggle the bookmark state
+      item.isBookmarked = !item.isBookmarked;
+      console.log(`Item bookmarked: ${item.isBookmarked}`, item);
+
+      // Update the UI
+      event.target.className = `fa-${item.isBookmarked ? "solid" : "regular"} fa-bookmark fa-xl bookmark`;
+    });
+  });
+}
+
+// Shuffle function
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
 showQuestions();
