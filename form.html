@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Brainstorm</title>
+</head>
+
+<body style="background-color: var(--background);">
+    <header>
+        <h1>Brainstorm</h1>
+    </header>
+    <main>
+        <section id="add-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Add Card</h2>
+                <a href="./form.html" type="button" data-js="reset-button">
+                    <i class="fas fa-undo fa-xl" style="color: var(--primary-color)"></i>
+                </a>
+            </div>
+              
+            <form id="add-card-form" data-js="add-card-form">
+
+                <label for="question">Question</label>
+                <textarea class="input" id="question" type="text" name="question" data-js="question-input" placeholder="e.g. What's Goofy's secret talent?"></textarea>
+                <p style="text-align: right; font-size: 12px;" data-js="char-count"></p>
+
+                <label for="answer-input">Answers</label>
+                <div style="display: flex; gap: 20px;">
+                    <input class="input" id="answer-input" type="text" data-js="answer-input" placeholder="e.g. Chess">
+                    <button class="input" type="button" data-js="add-answer-button">Add</button>
+                </div>
+
+
+                <ul style="display: none;" class="card-answers" name="answers" data-js="answers"></ul>
+
+                <label for="answer-selector">Correct Answer</label>
+                <select class="input" id="answer-selector" name="answer-selector" data-js="answer-selector">
+                    <option value="" disabled selected>Please select...</option>
+                </select>
+
+                <label for="difficultySelector">Difficulty</label>
+                <select class="input" id="difficultySelector" name="difficultySelector">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                
+                <label for="tag-input">Add Tag</label>
+                <input class="input" name="tag" id="tag-input" type="text" data-js="tag-input">
+
+                <button id="save-button" style="margin-top: 20px;" type="submit" data-js="add-question">Save</button>
+            </form>
+        </section>
+        <section style="margin-bottom: 60px;" id="card-preview" class="card" data-js="card-preview">Ops... Nothing here yet. Save to Preview</section>
+    </main>
+    <footer style="position: fixed; width: 100%;">
+        <nav>
+            <a href="./index.html"  aria-label="Home">
+                <i class="fa-solid fa-layer-group fa-xl" style="color: var(--light)"></i>
+            </a>
+            <a href="./bookmarks.html"  aria-label="Bookmarks">
+                <i class="fa-regular fa-bookmark fa-xl" style="color: var(--light)"></i>
+            </a>
+            <a href="./profile.html"  aria-label="Profile">
+                <i class="fa-solid fa-user fa-xl" style="color: var(--light)"></i>
+            </a>
+            <a href="./add.html" aria-label="Add Question">
+                <i class="fa-regular fa-plus fa-xl" style="color: var(--primary-color)"></i>
+              </a>
+        </nav>
+    </footer>
+</body>
+<script src="./form.js"></script>
+
+</html>
