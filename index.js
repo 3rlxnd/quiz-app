@@ -253,14 +253,6 @@ let questions = [
     tags: ["Biology", "Animals"],
   },
   {
-    question: "Which is the longest river in the world?",
-    answers: ["Amazon", "Nile", "Yangtze", "Mississippi"],
-    correctAnswer: "Amazon",
-    isBookmarked: false,
-    difficulty: "easy",
-    tags: ["Geography", "South America"],
-  },
-  {
     question: "What is the smallest planet in our Solar System?",
     answers: ["Mercury", "Venus", "Earth", "Mars"],
     correctAnswer: "Mercury",
@@ -1061,13 +1053,12 @@ function showQuestions() {
 }
 
 function attachEventListeners() {
-  // Answer click logic
   let answers = document.querySelectorAll(".answer");
   answers.forEach((button) => {
     button.addEventListener("click", (event) => {
-      const card = event.target.closest(".card"); // Get the parent card
-      const index = parseInt(card.dataset.index); // Retrieve the question index
-      const item = questions[index]; // Get the corresponding item object
+      const card = event.target.closest(".card");
+      const index = parseInt(card.dataset.index);
+      const item = questions[index];
       const answerElement = event.target;
       const correctAnswerElement = card.querySelector(".correct-answer");
 
@@ -1092,24 +1083,21 @@ function attachEventListeners() {
     });
   });
 
-  let bookmarks = document.querySelectorAll(".card-bookmark-button i");
+  let bookmarks = document.querySelectorAll(".card-bookmark-button");
   bookmarks.forEach((icon) => {
     icon.addEventListener("click", (event) => {
       const card = event.target.closest(".card");
       const index = parseInt(card.dataset.index);
       const item = questions[index];
 
-      // Toggle the bookmark state
       item.isBookmarked = !item.isBookmarked;
       console.log(`Item bookmarked: ${item.isBookmarked}`, item);
 
-      // Update the UI
       event.target.className = `fa-${item.isBookmarked ? "solid" : "regular"} fa-bookmark fa-xl bookmark`;
     });
   });
 }
 
-// Shuffle function
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
