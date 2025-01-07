@@ -5,6 +5,7 @@ const addAnswerButton = document.querySelector('[data-js="add-answer-button"]');
 const answerButtons = document.querySelector('[data-js="answers"]');
 const answerSelector = document.querySelector('[data-js="answer-selector"]');
 const questionInput = document.querySelector('[data-js="question-input"]');
+const tagInput = document.querySelector('[data-js="tag-input"]');
 const questionCount = document.querySelector('[data-js="char-count"]');
 
 const answers = []
@@ -15,13 +16,9 @@ form.addEventListener("submit", (event) => {
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData)
 
-    if (answers.length < 1) {
-        addAnswerInput.style.border = 'solid 0.5px red'
-    }
+    answers.length < 2 ? addAnswerInput.style.border = 'solid 0.5px red' :  addAnswerInput.style.border = 'none' 
     
-    if (data.question.trim() === '') {
-        questionInput.style.border = 'solid 0.5px red'
-    }
+    data.question.trim() === '' ? questionInput.style.border = 'solid 0.5px red' :  questionInput.style.border = 'none' 
 
     if (answers.length > 1 && data.question.trim() !== '') {
 
@@ -61,20 +58,15 @@ addAnswerButton.addEventListener('click', () => {
     option.textContent = addAnswerInput.value
 
     if (addAnswerInput.value && answers.length <= 3) {
-    
         answerButtons.style.display = 'flex'
         answerButtons.append(answer)
-
         answerSelector.append(option)
-        
         answers.push(addAnswerInput.value)
-        addAnswerInput.style.border = 'none'
-
-        console.log('Added Answer "' + addAnswerInput.value + '"');
-        
+        addAnswerInput.style.border = 'none'      
     } else {
         addAnswerInput.style.border = 'solid 0.5px red'
     }
+
     addAnswerInput.value = null
 })
 

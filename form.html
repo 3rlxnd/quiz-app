@@ -25,12 +25,12 @@
             <form id="add-card-form" data-js="add-card-form">
 
                 <label for="question">Question</label>
-                <textarea class="input" id="question" type="text" name="question" data-js="question-input" placeholder="e.g. What's Goofy's secret talent?"></textarea>
+                <textarea class="input" id="question" type="text" name="question" data-js="question-input" placeholder="Enter your question..."></textarea>
                 <p style="text-align: right; font-size: 12px;" data-js="char-count"></p>
 
                 <label for="answer-input">Answers</label>
-                <div style="display: flex; gap: 20px;">
-                    <input class="input" id="answer-input" type="text" data-js="answer-input" placeholder="e.g. Chess">
+                <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                    <input class="input" id="answer-input" type="text" data-js="answer-input" placeholder="Add an answer...">
                     <button class="input" type="button" data-js="add-answer-button">Add</button>
                 </div>
 
@@ -50,7 +50,7 @@
                 </select>
                 
                 <label for="tag-input">Add Tag</label>
-                <input class="input" name="tag" id="tag-input" type="text" data-js="tag-input">
+                <input class="input" name="tag" id="tag-input" type="text" data-js="tag-input" placeholder="Add a Tag...">
 
                 <button id="save-button" style="margin-top: 20px;" type="submit" data-js="add-question">Save</button>
             </form>
