@@ -9,6 +9,7 @@ const tagInput = document.querySelector('[data-js="tag-input"]');
 const questionCount = document.querySelector('[data-js="char-count"]');
 
 const answers = []
+let maxChar = 50
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -68,11 +69,10 @@ addAnswerButton.addEventListener('click', () => {
     } else {
         addAnswerInput.style.border = 'solid 0.5px red'
     }
-
+    
     addAnswerInput.value = null
 })
 
-let maxChar = 50
 questionCount.textContent = maxChar + '/' + maxChar
 
 questionInput.addEventListener('input', (event) => {
