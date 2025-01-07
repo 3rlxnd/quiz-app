@@ -13,12 +13,7 @@ form.addEventListener("submit", (event) => {
 
     if (answers.length > 1) {
         const formData = new FormData(event.target)
-        // formData.append('answers', [answers])
         const data = Object.fromEntries(formData)
-
-        console.log(data)
-
-        let answersArray = data.answers
 
         let card = `<p class="card-bookmark-button">
             <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
@@ -43,7 +38,7 @@ form.addEventListener("submit", (event) => {
             answersList.append(item)
         })
 
-        console.log('Saved new Question');
+        console.log(`Saved new Question: "${data.question}"`);
 
     }
 });

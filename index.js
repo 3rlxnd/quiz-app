@@ -3,19 +3,19 @@ const bookmarks = document.querySelectorAll('.card-bookmark-button')
 
 answers.forEach((answer) => {
     answer.addEventListener("click", (event) => {
-        let selected = event.target
+        let selectedAnswer = event.target
         let card = event.target.closest('.card')
         let correctAnswer = card.querySelector('.correct-answer')
 
-        if (selected.textContent === correctAnswer.textContent) {
-            selected.style.background = 'green'
+        if (selectedAnswer.textContent === correctAnswer.textContent) {
+            selectedAnswer.style.background = 'green'
             setTimeout(() => {
                 card.remove()
             }, 1500)
         } else {
-            selected.classList.add('shake');
-            selected.addEventListener('animationend', () => {
-                selected.classList.remove('shake');
+            selectedAnswer.classList.add('shake');
+            selectedAnswer.addEventListener('animationend', () => {
+                selectedAnswer.classList.remove('shake');
             }, { once: true });
         }
     })

@@ -16,7 +16,7 @@
     <main>
         <section id="add-card">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h2>Add Card</h2>
+                <h2 id="add-card-title">Add Card</h2>
                 <a href="./form.html" type="button" data-js="reset-button">
                     <i class="fas fa-undo fa-xl" style="color: var(--primary-color)"></i>
                 </a>
@@ -52,7 +52,7 @@
                 <label for="tag-input">Add Tag</label>
                 <input class="input" name="tag" id="tag-input" type="text" data-js="tag-input">
 
-                <button id="save-button" style="margin-top: 20px;" type="submit" data-js="add-question">Save</button>
+                <button class="save-button" style="margin-top: 20px;" type="submit" data-js="add-question">Save</button>
             </form>
         </section>
         <section style="margin-bottom: 60px;" id="card-preview" class="card" data-js="card-preview">Ops... Nothing here yet. Save to Preview</section>
