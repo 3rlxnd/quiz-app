@@ -6,14 +6,24 @@ const answerButtons = document.querySelector('[data-js="answers"]');
 const answerSelector = document.querySelector('[data-js="answer-selector"]');
 const questionInput = document.querySelector('[data-js="question-input"]');
 const questionCount = document.querySelector('[data-js="char-count"]');
+
 const answers = []
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
+    
+    const formData = new FormData(event.target)
+    const data = Object.fromEntries(formData)
 
-    if (answers.length > 1) {
-        const formData = new FormData(event.target)
-        const data = Object.fromEntries(formData)
+    if (answers.length < 1) {
+        addAnswerInput.style.border = 'solid 0.5px red'
+    }
+    
+    if (data.question.trim() === '') {
+        questionInput.style.border = 'solid 0.5px red'
+    }
+
+    if (answers.length > 1 && data.question.trim() !== '') {
 
         let card = `<p class="card-bookmark-button">
             <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
@@ -39,7 +49,6 @@ form.addEventListener("submit", (event) => {
         })
 
         console.log(`Saved new Question: "${data.question}"`);
-
     }
 });
 
@@ -52,11 +61,15 @@ addAnswerButton.addEventListener('click', () => {
     option.textContent = addAnswerInput.value
 
     if (addAnswerInput.value && answers.length <= 3) {
+    
         answerButtons.style.display = 'flex'
         answerButtons.append(answer)
-        answers.push(addAnswerInput.value)
+
         answerSelector.append(option)
+        
+        answers.push(addAnswerInput.value)
         addAnswerInput.style.border = 'none'
+
         console.log('Added Answer "' + addAnswerInput.value + '"');
         
     } else {
