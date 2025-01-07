@@ -19,8 +19,10 @@ form.addEventListener("submit", (event) => {
     answers.length < 2 ? addAnswerInput.style.border = 'solid 0.5px red' :  addAnswerInput.style.border = 'none' 
     
     data.question.trim() === '' ? questionInput.style.border = 'solid 0.5px red' :  questionInput.style.border = 'none' 
+    
+    data.tag.trim() === '' ? tagInput.style.border = 'solid 0.5px red' :  tagInput.style.border = 'none' 
 
-    if (answers.length > 1 && data.question.trim() !== '') {
+    if (answers.length > 1 && data.question.trim() !== '' && data.tag.trim() !== '') {
 
         let card = `<p class="card-bookmark-button">
             <i class="fa-regular fa-bookmark fa-xl bookmark" alt="Bookmark Button" role="button" aria-label="Bookmark Question" aria-pressed="false"></i>
